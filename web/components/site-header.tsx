@@ -172,16 +172,14 @@ export function SiteHeader({
       >
         <div className="announcement__inner page-width">
           <p>
-            <span className="announcement__status">Applications open</span>
-            <strong>Give the founder in you a real chance.</strong>
-            <span>Founding Cohort applications are live in Mumbai &amp; Pune.</span>
+            <strong>Founding Cohort applications are open in Mumbai and Pune.</strong>
             <button
               className="announcement__detail"
               type="button"
               tabIndex={ribbonHidden ? -1 : undefined}
               onClick={handleApply}
             >
-              {applicationLabel}
+              Apply now →
             </button>
           </p>
           <button

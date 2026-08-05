@@ -52,7 +52,7 @@ function AuthDialog({
   const title = isSignIn ? "Welcome back" : "Create your account";
   const intro =
     intent === "application"
-      ? "Save your Cohort 1 application and return whenever you need to finish it."
+      ? "Save your Founding Cohort application and return whenever you need to finish it."
       : "Access applicant materials, saved downloads, and application history.";
   const submitLabel = isSignIn
     ? intent === "application"
@@ -173,7 +173,7 @@ function ApplicationDialog({
           <div>
             <p className="dialog-kicker">Applicant workspace</p>
             <h2 id="application-title">My applications</h2>
-            <p>Track your Cohort 1 draft, status, and applicant materials.</p>
+            <p>Track your Founding Cohort draft, status, and applicant materials.</p>
           </div>
           <button className="dialog-close" type="button" aria-label="Close" onClick={onClose}>
             <CloseIcon />
@@ -182,7 +182,7 @@ function ApplicationDialog({
 
         <div className="application-progress" aria-label={`Application ${progress}% complete`}>
           <div>
-            <span>Cohort 1 Fellowship Application</span>
+            <span>Bayes Founder Fellowship — Founding Cohort</span>
             <strong>{hasApplication ? `${progress}% complete` : "Not started"}</strong>
           </div>
           <i>

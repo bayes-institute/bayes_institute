@@ -15,12 +15,12 @@ export default function Home() {
             <div className="hero__content page-width">
               <div className="hero-copy">
                 <h1 className="hero-title hero-reveal hero-reveal--two">
-                  <span className="hero-title__lead">Building software has never been easier.</span>
-                  <span className="hero-title__main">Building something <em>customers pay for</em><br /> is still rare.</span>
+                  <span className="hero-title__lead">Give the founder in you a real chance.</span>
+                  <span className="hero-title__main">Build something <em>customers pay for.</em></span>
                 </h1>
 
                 <p className="hero-intro hero-reveal hero-reveal--three">
-                  The Founder Fellowship bridges this gap. Over <strong>40 part-time weeks</strong>, working professionals and technical minds validate market demand, launch a focused software product, and gather the revenue evidence needed to transition full-time.
+                  The Bayes Founder Fellowship runs over <strong>40 part-time weeks</strong>, helping working professionals and technical minds validate market demand, launch a focused software product, and gather the revenue evidence before transitioning full-time to their start-ups.
                 </p>
 
                 <div className="hero-actions hero-reveal hero-reveal--four">
@@ -29,7 +29,7 @@ export default function Home() {
                     <ArrowIcon />
                   </button>
                   <Link className="button button--secondary" href="/fellowship">
-                    <span>Explore the 40-Week Curriculum</span>
+                    <span>Explore the Fellowship</span>
                   </Link>
                 </div>
               </div>
