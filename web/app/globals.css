@@ -27,7 +27,7 @@
   --line-soft: rgb(91 15 26 / 8%);
   --page-gutter: clamp(1.25rem, 4vw, 4.5rem);
   --page-width: 94rem;
-  --header-expanded: clamp(2.3rem, 3.2vw, 3.0rem);
+  --header-expanded: clamp(2.6rem, 3.5vw, 3.3rem);
   --announcement-expanded: 2.75rem;
   color-scheme: light;
 }
@@ -293,6 +293,7 @@ button {
   width: min(100%, var(--page-width));
   height: var(--header-height, var(--header-expanded));
   padding-inline: var(--page-gutter);
+  padding-bottom: clamp(0.35rem, 0.6vh, 0.6rem);
   grid-template-columns: 1fr auto 1fr;
   border-bottom: 1px solid rgb(91 15 26 / var(--header-border-alpha, 0.14));
   --navbar-action-font-size: 0.85rem;
