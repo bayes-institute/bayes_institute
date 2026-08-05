@@ -1,11 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-prime: #5b0f1a;
+  --font-sans: var(--font-manrope), Arial, sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  --color-burgundy-50: #fbf5f5;
+  --color-burgundy-100: #f3e5e7;
+  --color-burgundy-200: #e5c9cd;
+  --color-burgundy-300: #cc9ea5;
+  --color-burgundy-400: #aa6873;
+  --color-burgundy-500: #813344;
+  --color-burgundy-600: #5b0f1a;
+  --color-burgundy-700: #490a14;
+  --color-burgundy-800: #35060d;
+  --color-burgundy-900: #210307;
   --color-porcelain: #fffefa;
+  --color-porcelain-deep: #f8f4ed;
   --color-ink: #20191a;
-  --font-sans: var(--font-manrope);
-  --font-display: var(--font-newsreader);
+  --color-muted: #706467;
 }
 
 :root {
@@ -27,7 +38,7 @@
   --line-soft: rgb(91 15 26 / 8%);
   --page-gutter: clamp(1.25rem, 4vw, 4.5rem);
   --page-width: 94rem;
-  --header-expanded: clamp(4.6rem, 6.5vw, 6.1rem);
+  --header-expanded: clamp(4.8rem, 6.9vw, 6.4rem);
   --announcement-expanded: 2.75rem;
   color-scheme: light;
 }
@@ -100,7 +111,7 @@ button {
 .hero {
   position: relative;
   display: flex;
-  min-height: max(32rem, calc(100vh - 6.8rem));
+  min-height: max(28rem, calc(100vh - 7rem));
   padding-top: calc(var(--header-expanded) + var(--announcement-expanded));
   overflow: clip;
   flex-direction: column;
@@ -581,7 +592,7 @@ button {
   position: relative;
   flex: 1;
   padding-top: clamp(0.75rem, 1.8vh, 1.75rem);
-  padding-bottom: clamp(0.6rem, 1.2vh, 1.2rem);
+  padding-bottom: clamp(0.6rem, 0.8vh, 0.9rem);
   align-items: center;
   grid-template-columns: minmax(0, 1.1fr) minmax(26rem, 0.9fr);
   gap: clamp(2.8rem, 4.7vw, 5.25rem);
@@ -879,21 +890,7 @@ button {
   background: var(--line);
 }
 
-/* On desktop the next burgundy section deliberately remains in view as a scroll cue. */
-@media (min-width: 48.0625rem) {
-  .hero {
-    height: calc(100svh - 1rem);
-    min-height: 0;
-  }
 
-  .hero-title {
-    font-size: clamp(4rem, min(7vw, 9.2svh), 7.45rem);
-  }
-
-  .hero-visual {
-    width: min(100%, clamp(28rem, 45vw, 49rem), calc(100svh - 18rem));
-  }
-}
 
 .hero-reveal {
   opacity: 0;
