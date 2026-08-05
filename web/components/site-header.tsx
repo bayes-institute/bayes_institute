@@ -71,7 +71,7 @@ export function SiteHeader({
         if (!header) return;
 
         const mobile = window.innerWidth <= 768;
-        const expandedHeight = Math.min(98, Math.max(76, window.innerWidth * 0.071));
+        const expandedHeight = Math.min(106, Math.max(82, window.innerWidth * 0.078));
         const compactHeight = mobile ? 54 : 58;
         const transitionDistance = mobile ? 100 : 140;
         const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
