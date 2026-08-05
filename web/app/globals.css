@@ -675,7 +675,7 @@ button {
 }
 
 .hero-intro {
-  max-width: 48rem;
+  max-width: 41.5rem;
   margin: clamp(1.4rem, 2.6vh, 2.2rem) 0 0;
   color: var(--muted);
   font-family: var(--font-newsreader), Georgia, serif;
