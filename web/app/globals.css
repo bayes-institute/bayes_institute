@@ -27,7 +27,7 @@
   --line-soft: rgb(91 15 26 / 8%);
   --page-gutter: clamp(1.25rem, 4vw, 4.5rem);
   --page-width: 94rem;
-  --header-expanded: clamp(4.8rem, 6.9vw, 6.4rem);
+  --header-expanded: clamp(3.8rem, 5.0vw, 4.8rem);
   --announcement-expanded: 2.75rem;
   color-scheme: light;
 }
@@ -551,7 +551,7 @@ button {
 
 .hero__content {
   @apply grid relative flex-1 items-center;
-  padding-top: clamp(0.75rem, 1.8vh, 1.75rem);
+  padding-top: 0.25rem;
   padding-bottom: clamp(0.6rem, 0.8vh, 0.9rem);
   grid-template-columns: minmax(0, 1.1fr) minmax(26rem, 0.9fr);
   gap: clamp(2.8rem, 4.7vw, 5.25rem);
