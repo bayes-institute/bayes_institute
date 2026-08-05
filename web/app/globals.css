@@ -100,7 +100,7 @@ button {
 .hero {
   position: relative;
   display: flex;
-  min-height: max(36rem, calc(100vh - 3.8rem));
+  min-height: max(34rem, calc(100vh - 5.25rem));
   padding-top: calc(var(--header-expanded) + var(--announcement-expanded));
   overflow: clip;
   flex-direction: column;
@@ -1632,7 +1632,7 @@ button {
   }
 
   .hero {
-    min-height: 100svh;
+    min-height: calc(100svh - 3.8rem);
   }
 
   .hero::before {
