@@ -16,7 +16,7 @@ export default function Home() {
               <div className="hero-copy">
                 <h1 className="hero-title hero-reveal hero-reveal--two">
                   <span className="hero-title__lead">Building software has never been easier.</span>
-                  <span className="hero-title__main">Building something <em>customers pay for</em> is still rare.</span>
+                  <span className="hero-title__main">Building something <em>customers pay for</em><br /> is still rare.</span>
                 </h1>
 
                 <p className="hero-intro hero-reveal hero-reveal--three">
