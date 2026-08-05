@@ -27,7 +27,7 @@
   --line-soft: rgb(91 15 26 / 8%);
   --page-gutter: clamp(1.25rem, 4vw, 4.5rem);
   --page-width: 94rem;
-  --header-expanded: clamp(4.4rem, 6.2vw, 5.8rem);
+  --header-expanded: clamp(4.6rem, 6.5vw, 6.1rem);
   --announcement-expanded: 2.75rem;
   color-scheme: light;
 }
@@ -100,7 +100,7 @@ button {
 .hero {
   position: relative;
   display: flex;
-  min-height: max(34rem, calc(100vh - 5.25rem));
+  min-height: max(32rem, calc(100vh - 6.8rem));
   padding-top: calc(var(--header-expanded) + var(--announcement-expanded));
   overflow: clip;
   flex-direction: column;
@@ -581,7 +581,7 @@ button {
   position: relative;
   flex: 1;
   padding-top: clamp(0.75rem, 1.8vh, 1.75rem);
-  padding-bottom: clamp(1.2rem, 2.2vh, 2.2rem);
+  padding-bottom: clamp(0.6rem, 1.2vh, 1.2rem);
   align-items: center;
   grid-template-columns: minmax(0, 1.1fr) minmax(26rem, 0.9fr);
   gap: clamp(2.8rem, 4.7vw, 5.25rem);
