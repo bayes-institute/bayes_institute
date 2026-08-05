@@ -71,8 +71,8 @@ export function SiteHeader({
         if (!header) return;
 
         const mobile = window.innerWidth <= 768;
-        const expandedHeight = Math.min(106, Math.max(82, window.innerWidth * 0.078));
-        const compactHeight = mobile ? 54 : 58;
+        const expandedHeight = Math.min(112, Math.max(88, window.innerWidth * 0.082));
+        const compactHeight = mobile ? 60 : 64;
         const transitionDistance = mobile ? 100 : 140;
         const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const naturalProgress = Math.min(Math.max(window.scrollY / transitionDistance, 0), 1);
