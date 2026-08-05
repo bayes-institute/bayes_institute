@@ -30,7 +30,6 @@ export default function Home() {
                   </button>
                   <Link className="button button--secondary" href="/fellowship">
                     <span>Explore the 40-Week Curriculum</span>
-                    <ArrowIcon />
                   </Link>
                 </div>
               </div>
