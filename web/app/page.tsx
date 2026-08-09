@@ -1,62 +1,53 @@
-"use client";
-
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowIcon, SiteExperience } from "../components/site-experience";
 
 export default function Home() {
   return (
-    <SiteExperience>
-      {({ hasApplication, isAuthenticated, onApply }) => (
-        <>
-          <section className="hero" id="top">
-            <div className="hero__grid-lines" aria-hidden="true" />
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100svh",
+        gap: "2.5rem",
+        padding: "2rem",
+      }}
+    >
+      <Image
+        src="/assets/logos/logo-primary.svg"
+        alt="Bayes Institute"
+        width={648}
+        height={272}
+        priority
+        style={{ width: "min(18rem, 70vw)", height: "auto" }}
+      />
 
-            <div className="hero__content page-width">
-              <div className="hero-copy">
-                <h1 className="hero-title hero-reveal hero-reveal--two">
-                  <span className="hero-title__lead">Give the founder in you a real chance.</span>
-                  <span className="hero-title__main">Build something <em>customers pay for.</em></span>
-                </h1>
+      <h1
+        style={{
+          margin: 0,
+          fontFamily: "var(--font-newsreader), Georgia, serif",
+          fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+          fontWeight: 400,
+          letterSpacing: "-0.03em",
+          color: "var(--ink)",
+          textAlign: "center",
+        }}
+      >
+        Something new is coming.
+      </h1>
 
-                <p className="hero-intro hero-reveal hero-reveal--three">
-                  The Bayes Founder Fellowship runs over <strong>40 part-time weeks</strong>, helping working professionals and technical minds validate market demand, launch a focused software product, and gather the revenue evidence before transitioning full-time to their start-ups.
-                </p>
-
-                <div className="hero-actions hero-reveal hero-reveal--four">
-                  <button className="button button--primary" type="button" onClick={onApply}>
-                    <span>{isAuthenticated && hasApplication ? "Resume application" : "Apply to the Founding Cohort"}</span>
-                    <ArrowIcon />
-                  </button>
-                  <Link className="button button--secondary" href="/fellowship">
-                    <span>Explore the Fellowship</span>
-                  </Link>
-                </div>
-              </div>
-
-              <figure className="hero-visual">
-                <div className="hero-visual__board">
-                  <Image
-                    src="/assets/img/homepage_hero_illustration.png"
-                    alt="Hand-drawn Bayes Founder Fellowship graph showing a founder journey rising beyond a corporate job path."
-                    width={1277}
-                    height={1231}
-                    priority
-                    sizes="(max-width: 768px) 96vw, (max-width: 1200px) 48vw, 49rem"
-                  />
-                </div>
-              </figure>
-            </div>
-          </section>
-
-          <div className="future-layouts" id="landing-preview" aria-label="Future page sections">
-            <section className="future-section future-section--split" aria-label="Fellowship preview" />
-            <section className="future-section future-section--columns" aria-label="Theses preview" />
-            <section className="future-section future-section--focus" aria-label="Library preview" />
-          </div>
-        </>
-      )
-      }
-    </SiteExperience >
+      <p
+        style={{
+          margin: 0,
+          maxWidth: "32rem",
+          color: "var(--muted)",
+          fontSize: "1rem",
+          lineHeight: 1.6,
+          textAlign: "center",
+        }}
+      >
+        The Bayes Institute is being rebuilt from the ground up.
+      </p>
+    </div>
   );
 }
