@@ -1,0 +1,28 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{204mm}{0mm}{210mm}{297mm}
+
+  \BayesPageBackground{BayesIvory}
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{6mm}{297mm}
+  \BayesText{14mm}{30mm}{180mm}{text=BayesOxblood}{{\Serif\fontsize{32}{38}\selectfont Clear promises.\\Clear limits.}}
+  \BayesText{14mm}{76mm}{180mm}{text=BayesOxblood}{{\BayesBodyMedium We believe that trust is built through radical transparency. You should know exactly what Bayes is committed to, and exactly what Bayes will never do, before you apply.}}
+  \BayesRule{BayesOxblood!25!BayesIvory}{14mm}{104mm}{196mm}{0.4pt}
+  
+  \BayesPanel{BayesVerdigris}{14mm}{110mm}{101mm}{272mm}
+  \BayesText{20mm}{116mm}{74mm}{text=BayesIvory}{{\BayesLabel WHAT BAYES DOES}}
+  \BayesRule{BayesIvory!50!BayesVerdigris}{20mm}{128mm}{94mm}{0.4pt}
+  \BayesText{20mm}{133mm}{74mm}{text=BayesIvory}{{\BayesBodySmall \textbf{Runs alongside college or work.}\\\vspace{1.5mm}The fellowship is 5 live hours per week. You keep your full-time job or finish your degree.\\\vspace{3mm}\textbf{Offers a refund window.}\\\vspace{1.5mm}100\% refund within 14 calendar days of Cohort Day 1, minus physical fulfillment costs up to \rupee 2,500.\\\vspace{3mm}\textbf{Funds the Industry Expedition.}\\\vspace{1.5mm}Travel, hotel, and meals for the 3-day expedition are fully covered by the institute.\\\vspace{3mm}\textbf{Protects your IP completely.}\\\vspace{1.5mm}Bayes claims zero equity, zero advisory shares, and zero IP rights over anything you build.\\\vspace{3mm}\textbf{Transparent installment pricing.}\\\vspace{1.5mm}Six monthly payment slots. No hidden fees. No predatory structures.}}
+  
+  \BayesPanel{BayesPaleOxblood}{105mm}{110mm}{196mm}{272mm}
+  \BayesText{111mm}{116mm}{78mm}{text=BayesOxblood}{{\BayesLabel WHAT BAYES DOES NOT DO}}
+  \BayesRule{BayesOxblood!40!BayesIvory}{111mm}{128mm}{190mm}{0.4pt}
+  \BayesText{111mm}{133mm}{78mm}{text=BayesOxblood}{{\BayesBodySmall \textbf{Does not grant a degree.}\\\vspace{1.5mm}Bayes is an entrepreneurial fellowship, not a degree-granting institution.\\\vspace{3mm}\textbf{Does not guarantee placements.}\\\vspace{1.5mm}We do not promise employment. We train founders. What you build is yours to decide.\\\vspace{3mm}\textbf{Does not take equity or IP.}\\\vspace{1.5mm}Zero equity. Zero advisory shares. Zero IP claims. Your company is entirely yours.\\\vspace{3mm}\textbf{Does not partner with NBFC lenders.}\\\vspace{1.5mm}We explicitly reject predatory debt financing. If you need aid, apply for a Bayes Scholarship Grant.\\\vspace{3mm}\textbf{Does not admit everyone.}\\\vspace{1.5mm}Selection is rigorous. We reject candidates who cannot commit time, intent, or honesty.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{105mm}{0mm}{210mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(157.5mm,-10mm)$) {25 \hspace{3mm}/\hspace{3mm} TRUST};
+
+\BayesFooter{BayesOxblood}{25}{29}
+\end{tikzpicture}

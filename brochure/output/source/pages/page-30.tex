@@ -1,0 +1,77 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPageBackground{BayesIvory}
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{6mm}{297mm}
+
+  \BayesText{14mm}{30mm}{130mm}{text=BayesOxblood}{%
+    {\Serif\fontsize{30}{36}\selectfont How Admission Works}}
+
+  \BayesText{14mm}{70mm}{130mm}{text=BayesOxblood}{%
+    {\BayesBodyMedium The selection funnel is rigorous. It is designed to find builders with the right trajectory, not just the right credentials.}}
+
+  \BayesRule{BayesVerdigris!50!BayesIvory}{14mm}{94mm}{130mm}{0.4pt}
+
+  \BayesVRule{BayesVerdigris!40!BayesIvory}{22mm}{110mm}{258mm}{1pt}
+
+  % Step 1
+  \fill[BayesVerdigris] ($(current page.north west)+(22mm,-110mm)$) circle (4mm);
+  \node[text=BayesIvory,inner sep=0,font=\BayesLabel] at ($(current page.north west)+(22mm,-110mm)$) {1};
+  \BayesText{31mm}{106mm}{95mm}{text=BayesOxblood}{%
+    {\BayesLabel EXPLORE THE HANDBOOK}}
+  \BayesText{31mm}{115mm}{95mm}{text=BayesMutedOxblood}{%
+    {\BayesBodySmall Read the Founder Briefing. Understand the curriculum, the commitment, and whether Bayes is built for where you want to go.}}
+
+  % Step 2
+  \fill[BayesVerdigris] ($(current page.north west)+(22mm,-148mm)$) circle (4mm);
+  \node[text=BayesIvory,inner sep=0,font=\BayesLabel] at ($(current page.north west)+(22mm,-148mm)$) {2};
+  \BayesText{31mm}{144mm}{95mm}{text=BayesOxblood}{%
+    {\BayesLabel FELLOWSHIP + SCHOLARSHIP APPLICATION}}
+  \BayesText{31mm}{153mm}{95mm}{text=BayesMutedOxblood}{%
+    {\BayesBodySmall A multi-stage application: Technical Trajectory audit, Ambition essays, and optional scholarship aid request. Auto-saved. Complete asynchronously.}}
+
+  % Step 3
+  \fill[BayesVerdigris] ($(current page.north west)+(22mm,-186mm)$) circle (4mm);
+  \node[text=BayesIvory,inner sep=0,font=\BayesLabel] at ($(current page.north west)+(22mm,-186mm)$) {3};
+  \BayesText{31mm}{182mm}{95mm}{text=BayesOxblood}{%
+    {\BayesLabel FOUNDER DIAGNOSTIC INTERVIEW}}
+  \BayesText{31mm}{191mm}{95mm}{text=BayesMutedOxblood}{%
+    {\BayesBodySmall A 30-to-40 minute 1-on-1 with the founder. Come ready to present a 5-minute technical breakdown of something you built or a problem you are obsessed with.}}
+
+  % Step 4
+  \fill[BayesVerdigris] ($(current page.north west)+(22mm,-222mm)$) circle (4mm);
+  \node[text=BayesIvory,inner sep=0,font=\BayesLabel] at ($(current page.north west)+(22mm,-222mm)$) {4};
+  \BayesText{31mm}{218mm}{95mm}{text=BayesOxblood}{%
+    {\BayesLabel OFFER LETTER + AID DECISION}}
+  \BayesText{31mm}{227mm}{95mm}{text=BayesMutedOxblood}{%
+    {\BayesBodySmall Successful candidates receive an official offer with scholarship grant details and net fee. A Sponsor One-Pager is included for family alignment.}}
+
+  % Step 5
+  \fill[BayesOxblood] ($(current page.north west)+(22mm,-258mm)$) circle (4mm);
+  \node[text=BayesIvory,inner sep=0,font=\BayesLabel] at ($(current page.north west)+(22mm,-258mm)$) {5};
+  \BayesText{31mm}{254mm}{95mm}{text=BayesOxblood}{%
+    {\BayesLabel \rupee5,000 SEAT CONFIRMATION + ENROLLMENT}}
+  \BayesText{31mm}{263mm}{95mm}{text=BayesMutedOxblood}{%
+    {\BayesBodySmall The \rupee5,000 deposit locks your seat within 48 hours of the offer. It is credited toward your first tuition installment. Your cohort journey begins.}}
+
+  % Right context card
+  \BayesPanel{BayesOxblood}{138mm}{94mm}{196mm}{275mm}
+  \BayesText{144mm}{100mm}{48mm}{text=BayesVerdigris}{%
+    {\BayesLabel SELECTION STANDARD}}
+  \BayesRule{BayesVerdigris!50!BayesOxblood}{144mm}{112mm}{190mm}{0.4pt}
+  \BayesText{144mm}{118mm}{48mm}{text=BayesIvory}{%
+    {\BayesBodySmall We do not evaluate by institutional pedigree, corporate title, or salary.\\[6mm]%
+    We select for:\\[4mm]%
+    \textbf{Practical systems competence.}\\[3mm]%
+    \textbf{Commercial courage.}\\[3mm]%
+    \textbf{Bayesian belief updating.}\\[3mm]%
+    \textbf{Time and solvency stability.}\\[10mm]%
+    A candidate from an unranked college with high agency will be admitted over a credential-heavy applicant who avoids customer reality.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{105mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(52.5mm,-10mm)$) {28 \hspace{3mm}/\hspace{3mm} ADMISSIONS};
+
+\BayesFooter{BayesOxblood}{28}{29}
+\end{tikzpicture}

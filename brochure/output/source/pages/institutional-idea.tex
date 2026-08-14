@@ -1,0 +1,27 @@
+\begin{tikzpicture}[remember picture,overlay]
+  \BayesPageBackground{BayesIvory}
+  \BayesPanel{BayesOxblood}{0mm}{0mm}{12mm}{297mm}
+  \BayesImageH{132mm}{0mm}{210mm}{297mm}{assets/mentor-seminar.png}
+  \BayesPanel{BayesVerdigris,opacity=.16}{132mm}{0mm}{210mm}{297mm}
+  \BayesPanel{BayesOxblood}{132mm}{248mm}{210mm}{297mm}
+
+  \node[anchor=north west,inner sep=0] at ($(current page.north west)+(25mm,-18mm)$)
+    {\includegraphics[width=15mm]{assets/bayes-emblem-primary.pdf}};
+  \BayesText{25mm}{44mm}{86mm}{text=BayesVerdigris}{{\BayesLabel 01 / THE INSTITUTIONAL IDEA}}
+  \BayesText{25mm}{62mm}{96mm}{text=BayesOxblood}{{\Serif\fontsize{26}{28}\selectfont THE BEST IDEAS\\SURVIVE CONTACT\\WITH REALITY.}}
+  \BayesText{25mm}{142mm}{88mm}{text=BayesOxblood}{{\BayesBody Bayes Institute brings disciplined inquiry into contact with making. Understanding becomes useful when it can withstand evidence, constraints, and consequence.}}
+
+  \BayesRule{BayesOxblood}{25mm}{191mm}{119mm}{.6pt}
+  \BayesText{25mm}{199mm}{27mm}{text=BayesOxblood}{{\BayesLabel THINK}\\\vspace{2.5mm}{\BayesBodySmall Name the real question.}}
+  \BayesText{57mm}{199mm}{27mm}{text=BayesOxblood}{{\BayesLabel TEST}\\\vspace{2.5mm}{\BayesBodySmall Meet the evidence.}}
+  \BayesText{89mm}{199mm}{30mm}{text=BayesOxblood}{{\BayesLabel MAKE}\\\vspace{2.5mm}{\BayesBodySmall Build the response.}}
+
+  \BayesPanel{BayesVerdigris}{25mm}{243mm}{119mm}{276mm}
+  \BayesText{31mm}{250mm}{12mm}{text=BayesIvory}{{\Sans\bfseries\fontsize{20}{20}\selectfont 01}}
+  \BayesText{49mm}{249mm}{62mm}{text=BayesIvory}{{\BayesLabel GUIDING PRINCIPLE}\\\vspace{2mm}{\BayesBodySmall Notice first. Name precisely. Then build.}}
+
+  \BayesPhotoCaption{141mm}{258mm}{58mm}{BayesIvory}{FOUNDER / SEMINAR / INQUIRY}
+  \BayesFooter{BayesOxblood}{02}{06}
+  \node[anchor=north east,text=BayesIvory,inner sep=0,font=\BayesMeta]
+    at ($(current page.north east)+(-14mm,-282mm)$) {02\hspace{2mm}/\hspace{2mm}06};
+\end{tikzpicture}

@@ -1,0 +1,76 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPageBackground{BayesIvory}
+  \BayesPanel{BayesOxblood}{0mm}{0mm}{12mm}{297mm}
+
+  % ── Page Header ──
+  \BayesText{25mm}{28mm}{160mm}{text=BayesVerdigris}{{\BayesLabel INSIDE BAYES}}
+  \BayesText{25mm}{35mm}{160mm}{text=BayesOxblood}{{\Serif\fontsize{26}{30}\selectfont TABLE OF CONTENTS}}
+  \BayesRule{BayesOxblood}{25mm}{48mm}{171mm}{0.8pt}
+
+  %
+  % SPACING SYSTEM (consistent for every group):
+  %   Number:   Y
+  %   Title:    Y + 1mm
+  %   Page ref: Y + 2mm
+  %   Items:    Y + 8mm
+  %   Baseline offset per item line: 6mm
+  %   Rule:     Y + 8mm + (num_items - 1)*6mm + 14mm
+  %   Group gap: 4mm below rule
+  %
+  %   BayesBodySmall = 10pt/16pt = 5.64mm baseline skip
+  %   \\[1pt] adds 0.35mm → effective line pitch ≈ 6mm
+  %
+
+  % ── 01  THE WHY ──  3 items
+  %   Items: Y=62, last baseline: 62 + 2*6 = 74, rule: 74+10 = 84
+  \BayesText{25mm}{54mm}{18mm}{text=BayesVerdigris}{{\Serif\fontsize{22}{22}\selectfont 01}}
+  \BayesText{46mm}{55mm}{110mm}{text=BayesOxblood}{{\Serif\fontsize{14}{18}\selectfont THE WHY}}
+  \node[anchor=north east,text=BayesOxblood!50,inner sep=0,font=\BayesLabel]
+    at ($(current page.north west)+(196mm,-56mm)$) {01--03};
+  \BayesText{46mm}{62mm}{150mm}{text=BayesOxblood!70}{%
+    {\BayesBodySmall The Belief\\[1pt] The Mission\\[1pt] Five Principles}}
+  \BayesRule{BayesOxblood!12}{46mm}{84mm}{150mm}{0.3pt}
+
+  % ── 02  THE FELLOWSHIP ──  3 items
+  %   Start: 84+4 = 88.  Items: 96, last baseline: 96+12=108, rule: 108+10=118
+  \BayesText{25mm}{88mm}{18mm}{text=BayesVerdigris}{{\Serif\fontsize{22}{22}\selectfont 02}}
+  \BayesText{46mm}{89mm}{110mm}{text=BayesOxblood}{{\Serif\fontsize{14}{18}\selectfont THE FELLOWSHIP}}
+  \node[anchor=north east,text=BayesOxblood!50,inner sep=0,font=\BayesLabel]
+    at ($(current page.north west)+(196mm,-90mm)$) {07--08};
+  \BayesText{46mm}{96mm}{150mm}{text=BayesOxblood!70}{%
+    {\BayesBodySmall The Fellowship at a Glance\\[1pt] Four Archetypes\\[1pt] How You Learn}}
+  \BayesRule{BayesOxblood!12}{46mm}{118mm}{150mm}{0.3pt}
+
+  % ── 03  THE JOURNEY ──  7 items
+  %   Start: 118+4 = 122.  Items: 130, last baseline: 130+36=166, rule: 166+10=176
+  \BayesText{25mm}{122mm}{18mm}{text=BayesVerdigris}{{\Serif\fontsize{22}{22}\selectfont 03}}
+  \BayesText{46mm}{123mm}{110mm}{text=BayesOxblood}{{\Serif\fontsize{14}{18}\selectfont THE JOURNEY}}
+  \node[anchor=north east,text=BayesOxblood!50,inner sep=0,font=\BayesLabel]
+    at ($(current page.north west)+(196mm,-124mm)$) {10--24};
+  \BayesText{46mm}{130mm}{150mm}{text=BayesOxblood!70}{%
+    {\BayesBodySmall The 40-Week Journey\\[1pt] Stage 1: Find the Problem\\[1pt] Stage 2: Shape the Promise\\[1pt] Stage 3: Build Under Pressure\\[1pt] Stage 4: Win Real Customers\\[1pt] Stage 5: Stand on Evidence\\[1pt] The Evidence Board}}
+  \BayesRule{BayesOxblood!12}{46mm}{186mm}{150mm}{0.3pt}
+
+  % ── 04  THE COMMITMENT ──  2 items
+  \BayesText{25mm}{190mm}{18mm}{text=BayesVerdigris}{{\Serif\fontsize{22}{22}\selectfont 04}}
+  \BayesText{46mm}{191mm}{110mm}{text=BayesOxblood}{{\Serif\fontsize{14}{18}\selectfont THE COMMITMENT}}
+  \node[anchor=north east,text=BayesOxblood!50,inner sep=0,font=\BayesLabel]
+    at ($(current page.north west)+(196mm,-192mm)$) {25--26};
+  \BayesText{46mm}{198mm}{150mm}{text=BayesOxblood!70}{%
+    {\BayesBodySmall Trust \& Guarantees\\[1pt] Investment \& Rationalization}}
+  \BayesRule{BayesOxblood!12}{46mm}{214mm}{150mm}{0.3pt}
+
+  % ── 05  JOIN ──  3 items
+  \BayesText{25mm}{218mm}{18mm}{text=BayesVerdigris}{{\Serif\fontsize{22}{22}\selectfont 05}}
+  \BayesText{46mm}{219mm}{110mm}{text=BayesOxblood}{{\Serif\fontsize{14}{18}\selectfont JOIN}}
+  \node[anchor=north east,text=BayesOxblood!50,inner sep=0,font=\BayesLabel]
+    at ($(current page.north west)+(196mm,-220mm)$) {27--29};
+  \BayesText{46mm}{226mm}{150mm}{text=BayesOxblood!70}{%
+    {\BayesBodySmall Scholarships\\[1pt] Admissions\\[1pt] Apply Now}}
+
+  % ── Footer (Unnumbered Table of Contents) ──
+  \node[anchor=north east,text=BayesOxblood,inner sep=0,font=\BayesMeta]
+    at ($(current page.north east)+(-14mm,-282mm)$) {bayesinstitute.com};
+
+\end{tikzpicture}

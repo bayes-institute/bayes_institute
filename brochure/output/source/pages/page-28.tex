@@ -1,0 +1,33 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{6mm}{297mm}
+
+  \BayesPageBackground{BayesOxblood}
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{210mm}{8mm}
+  \BayesText{14mm}{28mm}{180mm}{text=BayesIvory}{{\Serif\fontsize{56}{58}\selectfont \rupee 2,80,000}}
+  \BayesText{14mm}{68mm}{100mm}{text=BayesVerdigris}{{\BayesLabel GST INCLUSIVE / TOTAL TUITION}}
+  \BayesRule{BayesVerdigris!50!BayesOxblood}{14mm}{82mm}{196mm}{0.6pt}
+  \BayesText{14mm}{90mm}{180mm}{text=BayesIvory,opacity=0.85}{{\BayesBodyMedium \rupee 5,000 seat confirmation deposit credited toward tuition.\quad Six monthly payment slots across the 40-week program.}}
+  
+  \BayesRule{BayesVerdigris!30!BayesOxblood}{14mm}{114mm}{196mm}{0.4pt}
+  
+  \BayesText{14mm}{120mm}{85mm}{text=BayesVerdigris}{{\BayesLabel THE COST}}
+  \BayesText{14mm}{130mm}{85mm}{text=BayesIvory,opacity=0.85}{{\BayesBodySmall Total tuition: \rupee 2,80,000 GST inclusive.\\[4mm]Net after 18\% GST: \rupee 2,37,288.\\[4mm]Per live hour of instruction: \textbf{\rupee 1,186.}\\[4mm]Industry Expedition: \textbf{Fully funded.}\\[4mm]Equity taken: \textbf{Zero.}\\[4mm]Degree granted: \textbf{None.}}}
+  
+  \BayesVRule{BayesVerdigris!40!BayesOxblood}{103mm}{120mm}{240mm}{0.5pt}
+  
+  \BayesText{110mm}{120mm}{82mm}{text=BayesVerdigris}{{\BayesLabel THE RETURN}}
+  \BayesText{110mm}{130mm}{82mm}{text=BayesIvory,opacity=0.85}{{\BayesBodySmall \textbf{Rung 1 / Bootstrapped Seed:}\\ \rupee 50k--\rupee 1.5L MRR in 12 months.\\[4mm]\textbf{Rung 2 / Salary Jump:}\\ +\rupee 5L--\rupee 15L LPA as Founding Engineer.\\[4mm]\textbf{Rung 3 / Risk Shield:}\\ Preserves \rupee 18L--\rupee 25L in downside risk capital.\\[4mm]\textbf{Cumulative 3-year upside:}\\ \rupee 20L--\rupee 30L in net financial delta.}}
+  
+  \BayesPanel{BayesVerdigris}{14mm}{244mm}{196mm}{274mm}
+  \BayesText{20mm}{250mm}{170mm}{text=BayesOxblood}{{\BayesLabel THE 10x PRINCIPLE}}
+  \BayesText{20mm}{259mm}{170mm}{text=BayesOxblood}{{\BayesBodyMedium Paying \rupee 2.8L for a defensible \rupee 25L financial delta means tuition is literally 10\% of value acquired. That is the arithmetic of leverage.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{105mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(52.5mm,-10mm)$) {26 \hspace{3mm}/\hspace{3mm} THE INVESTMENT};
+
+\BayesFooter{BayesIvory}{26}{29}
+\end{tikzpicture}

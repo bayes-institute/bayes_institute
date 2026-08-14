@@ -1,0 +1,27 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{6mm}{297mm}
+
+  \BayesPageBackground{BayesIvory}
+  \BayesText{14mm}{35mm}{176mm}{text=BayesOxblood}{{\BayesSansDisplay WHO IS THIS FOR?}}
+  
+  \BayesPanel{BayesOxblood}{14mm}{55mm}{100mm}{150mm}
+  \BayesText{20mm}{65mm}{74mm}{text=BayesIvory}{{\BayesLabel 01 / PRODUCT \& SOFTWARE ENGINEERS}\\\vspace{3mm}{\BayesBody Engineers building software systems with a strong bias toward shipping.}}
+  
+  \BayesPanel{BayesVerdigris}{105mm}{55mm}{196mm}{150mm}
+  \BayesText{111mm}{65mm}{79mm}{text=BayesIvory}{{\BayesLabel 02 / STEM BUILDERS}\\\vspace{3mm}{\BayesBody Students or graduates in science, math, and technical fields building real tools.}}
+  
+  \BayesPanel{BayesVerdigris}{14mm}{160mm}{100mm}{255mm}
+  \BayesText{20mm}{170mm}{74mm}{text=BayesIvory}{{\BayesLabel 03 / FINAL-YEAR ENG STUDENTS}\\\vspace{3mm}{\BayesBody Students ready to transition from classroom assignments to serious building.}}
+  
+  \BayesPanel{BayesOxblood}{105mm}{160mm}{196mm}{255mm}
+  \BayesText{111mm}{170mm}{79mm}{text=BayesIvory}{{\BayesLabel 04 / AMBITIOUS TECH FOUNDERS}\\\vspace{3mm}{\BayesBody Builders from adjacent backgrounds serious about creating tech companies.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{105mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(52.5mm,-10mm)$) {08 \hspace{3mm}/\hspace{3mm} FOUR ARCHETYPES};
+
+\BayesFooter{BayesOxblood}{08}{29}
+\end{tikzpicture}

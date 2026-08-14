@@ -1,0 +1,18 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{6mm}{297mm}
+
+  \BayesPageBackground{BayesIvory}
+  \BayesImageW{0mm}{0mm}{210mm}{160mm}{assets/mentor-seminar.png}
+  \BayesPanel{BayesOxblood,opacity=.25}{0mm}{0mm}{210mm}{160mm}
+  \BayesText{14mm}{195mm}{180mm}{text=BayesOxblood}{{\Serif\fontsize{26}{30}\selectfont DISSECT REAL SYSTEMS AND OPERATOR FRICTION.}}
+  \BayesText{14mm}{230mm}{180mm}{text=BayesOxblood}{{\BayesBody Every mission begins with a hypothesis and ends with evidence. Fellows interrogate ground-level operational workflows, calculate the cost of doing nothing, and validate market demand.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{105mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(52.5mm,-10mm)$) {12 \hspace{3mm}/\hspace{3mm} GROUND TRUTH CALIBRATION};
+
+\BayesFooter{BayesOxblood}{12}{29}
+\end{tikzpicture}

@@ -1,0 +1,204 @@
+% Absolute-positioned design primitives. Coordinates are measured in mm from
+% the physical top-left corner of the A4 page.
+
+% ---------------------------------------------------------------------------
+% Custom fadings
+% ---------------------------------------------------------------------------
+\tikzfading[name=darkglow, inner color=transparent!0, outer color=transparent!100]
+
+% ---------------------------------------------------------------------------
+% BayesPageBackground — fills the entire page with a solid color
+% ---------------------------------------------------------------------------
+\newcommand{\BayesPageBackground}[1]{%
+  \fill[#1] (current page.south west) rectangle (current page.north east);%
+}
+
+% ---------------------------------------------------------------------------
+% BayesPanel — filled rectangle defined by (x1,y1) (x2,y2) from top-left
+% ---------------------------------------------------------------------------
+\newcommand{\BayesPanel}[5]{%
+  \fill[#1]
+    ($(current page.north west)+(#2,-#3)$)
+    rectangle
+    ($(current page.north west)+(#4,-#5)$);%
+}
+
+% ---------------------------------------------------------------------------
+% BayesStrokePanel — unfilled stroked rectangle
+% ---------------------------------------------------------------------------
+\newcommand{\BayesStrokePanel}[6]{%
+  \draw[#1,line width=#6]
+    ($(current page.north west)+(#2,-#3)$)
+    rectangle
+    ($(current page.north west)+(#4,-#5)$);%
+}
+
+% ---------------------------------------------------------------------------
+% BayesText — anchored text node (north-west) with ragged-right setting
+% Args: x, y, textwidth, extra node options, content
+% ---------------------------------------------------------------------------
+\newcommand{\BayesText}[5]{%
+  \node[anchor=north west,text width=#3,inner sep=0,align=left,
+    execute at begin node={\RaggedRight\hyphenpenalty=10000\exhyphenpenalty=10000},#4]
+    at ($(current page.north west)+(#1,-#2)$) {#5};%
+}
+
+% ---------------------------------------------------------------------------
+% BayesTextCentered — centered text node (fixed width, center aligned)
+% ---------------------------------------------------------------------------
+\newcommand{\BayesTextCentered}[5]{%
+  \node[anchor=north,text width=#3,inner sep=0,align=center,
+    execute at begin node={\Centering\hyphenpenalty=10000}]
+    at ($(current page.north west)+(#1,-#2)$) {#5};%
+}
+
+% ---------------------------------------------------------------------------
+% BayesImageW — clip and center an image by width
+% ---------------------------------------------------------------------------
+\newcommand{\BayesImageW}[5]{%
+  \pgfmathsetlengthmacro{\BayesImageWidth}{#3-#1}%
+  \begin{scope}
+    \clip ($(current page.north west)+(#1,-#2)$)
+      rectangle ($(current page.north west)+(#3,-#4)$);
+    \node[inner sep=0] at
+      ($($(current page.north west)+(#1,-#2)$)!.5!($(current page.north west)+(#3,-#4)$)$)
+      {\includegraphics[width=\BayesImageWidth]{#5}};
+  \end{scope}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesImageWTop — clip an image by width, anchoring it to the top
+% ---------------------------------------------------------------------------
+\newcommand{\BayesImageWTop}[5]{%
+  \pgfmathsetlengthmacro{\BayesImageWidth}{#3-#1}%
+  \begin{scope}
+    \clip ($(current page.north west)+(#1,-#2)$)
+      rectangle ($(current page.north west)+(#3,-#4)$);
+    \node[anchor=north west,inner sep=0] at
+      ($(current page.north west)+(#1,-#2)$)
+      {\includegraphics[width=\BayesImageWidth]{#5}};
+  \end{scope}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesImageH — clip and center an image by height
+% ---------------------------------------------------------------------------
+\newcommand{\BayesImageH}[5]{%
+  \pgfmathsetlengthmacro{\BayesImageHeight}{#4-#2}%
+  \begin{scope}
+    \clip ($(current page.north west)+(#1,-#2)$)
+      rectangle ($(current page.north west)+(#3,-#4)$);
+    \node[inner sep=0] at
+      ($($(current page.north west)+(#1,-#2)$)!.5!($(current page.north west)+(#3,-#4)$)$)
+      {\includegraphics[height=\BayesImageHeight]{#5}};
+  \end{scope}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesLogo — logo image at position
+% ---------------------------------------------------------------------------
+\newcommand{\BayesLogo}[5]{%
+  \node[anchor=north west,inner sep=0]
+    at ($(current page.north west)+(#1,-#2)$)
+    {\includegraphics[width=#3]{#4}};
+  \BayesText{#1}{#2+15mm}{#3}{text=#5}{}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesRule — horizontal rule
+% ---------------------------------------------------------------------------
+\newcommand{\BayesRule}[5]{%
+  \draw[#1,line width=#5]
+    ($(current page.north west)+(#2,-#3)$) --
+    ($(current page.north west)+(#4,-#3)$);%
+}
+
+% ---------------------------------------------------------------------------
+% BayesVRule — vertical rule
+% Args: color, x, y1, y2, line-width
+% ---------------------------------------------------------------------------
+\newcommand{\BayesVRule}[5]{%
+  \draw[#1,line width=#5]
+    ($(current page.north west)+(#2,-#3)$) --
+    ($(current page.north west)+(#2,-#4)$);%
+}
+
+% ---------------------------------------------------------------------------
+% BayesFooter — standard footer: page number on outer side, bayesinstitute.com on inner
+% ---------------------------------------------------------------------------
+\newcommand{\BayesFooter}[3]{%
+  \ifodd\number#2\relax
+    % ODD PAGE (Right page): Outer side is RIGHT (page number right, URL left)
+    \BayesText{14mm}{282mm}{75mm}{text=#1}{{\BayesMeta bayesinstitute.com}}%
+    \node[anchor=north east,text=#1,inner sep=0,font=\BayesMeta]
+      at ($(current page.north east)+(-24mm,-282mm)$) {#2};%
+  \else
+    % EVEN PAGE (Left page): Outer side is LEFT (page number left, URL right)
+    \BayesText{24mm}{282mm}{75mm}{text=#1}{{\BayesMeta #2}}%
+    \node[anchor=north east,text=#1,inner sep=0,font=\BayesMeta]
+      at ($(current page.north east)+(-14mm,-282mm)$) {bayesinstitute.com};%
+  \fi
+}
+
+% ---------------------------------------------------------------------------
+% BayesPhotoCaption — small caption at a position
+% ---------------------------------------------------------------------------
+\newcommand{\BayesPhotoCaption}[5]{%
+  \BayesText{#1}{#2}{#3}{text=#4}{{\BayesMeta #5}}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesCallout — pull-quote / callout block with left accent bar
+% Args: x, y, width, bar-color, text-color, content
+% ---------------------------------------------------------------------------
+\newcommand{\BayesCallout}[6]{%
+  \BayesVRule{#4}{#1}{#2}{#2+30mm}{2pt}%
+  \BayesText{#1+5mm}{#2}{#3-5mm}{text=#5}{#6}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesEvidenceTile — bordered tile for the evidence board
+% Args: x1, y1, x2, y2, border-color, label-color, body-color, label, body
+% ---------------------------------------------------------------------------
+\newcommand{\BayesEvidenceTile}[9]{%
+  \BayesStrokePanel{#5}{#1}{#2}{#3}{#4}{0.4pt}%
+  \BayesText{#1+4mm}{#2+5mm}{#3-#1-8mm}{text=#6}{{\BayesLabel #8}}%
+  \BayesText{#1+4mm}{#2+14mm}{#3-#1-8mm}{text=#7}{{\BayesBodyTiny #9}}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesTimelineStep — numbered vertical step
+% Args: x, y, number, title-color, body-color, number-label, title, body
+% ---------------------------------------------------------------------------
+\newcommand{\BayesTimelineStep}[8]{%
+  % Circle with number
+  \fill[#4] ($(current page.north west)+(#1,-#2)$) circle (3.5mm);%
+  \node[text=#5,font=\BayesLabel,inner sep=0]
+    at ($(current page.north west)+(#1,-#2)$) {#6};%
+  % Step content
+  \BayesText{#1+7mm}{#2-3mm}{60mm}{text=#4}{{\BayesLabel #7}}%
+  \BayesText{#1+7mm}{#2+4mm}{60mm}{text=#5}{{\BayesBodySmall #8}}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesStatBlock — large number + unit + label
+% Args: x, y, num-color, label-color, number, unit, descriptor
+% ---------------------------------------------------------------------------
+\newcommand{\BayesStatBlock}[7]{%
+  \BayesText{#1}{#2}{40mm}{text=#3}{{\Serif\fontsize{44}{44}\selectfont #5}}%
+  \BayesText{#1}{#2+24mm}{40mm}{text=#4}{{\BayesLabel #6}}%
+  \BayesText{#1}{#2+31mm}{40mm}{text=#4}{{\BayesMeta #7}}%
+}
+
+% ---------------------------------------------------------------------------
+% BayesChip — small rounded pill / chip for stat strips
+% Args: x, y, width, bg-color, text-color, content
+% ---------------------------------------------------------------------------
+\newcommand{\BayesChip}[6]{%
+  \fill[#4,rounded corners=2pt]
+    ($(current page.north west)+(#1,-#2)$)
+    rectangle
+    ($(current page.north west)+(#1+#3,-#2+5mm)$);%
+  \node[anchor=north west,inner sep=0,text=#5,font=\BayesBodyTiny]
+    at ($(current page.north west)+(#1+2mm,-#2+0.5mm)$) {#6};%
+}

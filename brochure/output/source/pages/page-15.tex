@@ -1,0 +1,19 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{204mm}{0mm}{210mm}{297mm}
+
+  \BayesPageBackground{BayesOxblood}
+  \BayesText{14mm}{40mm}{180mm}{text=BayesIvory}{{\Serif\fontsize{24}{28}\selectfont UNVARNISHED DIAGNOSTICS.\\NO PERFORMANCE.}}
+  \BayesText{14mm}{85mm}{180mm}{text=BayesIvory}{{\BayesBody Diagnostic clinics, peer pods, and live product teardowns replace performative presentations. Fellows discuss customer pushback, pricing friction, and operational bottlenecks openly.}}
+  
+  \BayesPanel{BayesIvory}{14mm}{140mm}{196mm}{240mm}
+  \BayesText{20mm}{152mm}{164mm}{text=BayesOxblood}{{\BayesLabel MONDAY DIAGNOSTIC CLINIC}\\\vspace{3mm}{\BayesBody 2-hour live session bringing the cohort together to stress-test evidence, teardown V2 builds, and calibrate next steps.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{105mm}{0mm}{210mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(157.5mm,-10mm)$) {13 \hspace{3mm}/\hspace{3mm} OSMOTIC LEARNING};
+
+\BayesFooter{BayesIvory}{13}{29}
+\end{tikzpicture}

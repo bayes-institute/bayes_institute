@@ -1,0 +1,34 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{204mm}{0mm}{210mm}{297mm}
+
+  \BayesPageBackground{BayesIvory}
+
+  \BayesText{14mm}{30mm}{130mm}{text=BayesOxblood}{%
+    {\Serif\fontsize{30}{36}\selectfont What You Graduate With}}
+
+  \BayesText{14mm}{70mm}{130mm}{text=BayesOxblood}{%
+    {\BayesBodyMedium Every fellow leaves with four non-negotiable artifacts of competence.}}
+
+  \BayesRule{BayesVerdigris!50!BayesIvory}{14mm}{94mm}{130mm}{0.4pt}
+
+  \BayesPanel{BayesIvory}{14mm}{110mm}{100mm}{180mm}
+  \BayesText{20mm}{120mm}{72mm}{text=BayesOxblood}{{\BayesLabel 01 / FALSIFIABLE THESIS}\\\vspace{3mm}{\BayesBody Grounded opportunity thesis with clear market catalyst, target ICP, and kill criteria.}}
+
+  \BayesPanel{BayesOxblood}{105mm}{110mm}{196mm}{180mm}
+  \BayesText{111mm}{120mm}{77mm}{text=BayesIvory}{{\BayesLabel 02 / DEPLOYED PRODUCT}\\\vspace{3mm}{\BayesBody Production-grade web/mobile application running live with telemetry and analytics.}}
+
+  \BayesPanel{BayesVerdigris}{14mm}{185mm}{100mm}{255mm}
+  \BayesText{20mm}{195mm}{72mm}{text=BayesIvory}{{\BayesLabel 03 / COMMERCIAL SIGNAL LOG}\\\vspace{3mm}{\BayesBody Documented buyer discovery transcripts, objection logs, and closed paid pilot contracts.}}
+
+  \BayesPanel{BayesIvory}{105mm}{185mm}{196mm}{255mm}
+  \BayesText{111mm}{195mm}{77mm}{text=BayesOxblood}{{\BayesLabel 04 / PROOF SYSTEM}\\\vspace{3mm}{\BayesBody Verified GitHub history, benchmark runs, user metrics, and founder reference graph.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{105mm}{0mm}{210mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(157.5mm,-10mm)$) {24 \hspace{3mm}/\hspace{3mm} THE EVIDENCE BOARD};
+
+\BayesFooter{BayesOxblood}{24}{29}
+\end{tikzpicture}

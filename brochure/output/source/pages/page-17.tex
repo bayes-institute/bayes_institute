@@ -1,0 +1,26 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{204mm}{0mm}{210mm}{297mm}
+
+  \BayesPageBackground{BayesOxblood}
+  \BayesText{14mm}{35mm}{176mm}{text=BayesIvory}{{\BayesSansDisplay REAL OPERATORS. REAL NUMBERS.\\REAL DECISIONS.}}
+  
+  \BayesPanel{BayesIvory}{14mm}{85mm}{71mm}{210mm}
+  \BayesText{20mm}{95mm}{45mm}{text=BayesOxblood}{{\BayesLabel UNIT ECONOMICS}\\\vspace{3mm}{\BayesBodySmall Dissecting real spreadsheets, margins, CAC, and payback periods.}}
+
+  \BayesPanel{BayesVerdigris}{75mm}{85mm}{132mm}{210mm}
+  \BayesText{81mm}{95mm}{45mm}{text=BayesIvory}{{\BayesLabel NEAR MISSES}\\\vspace{3mm}{\BayesBodySmall Near-fatal mistakes, co-founder friction, and pivot moments.}}
+
+  \BayesPanel{BayesPaleOxblood}{136mm}{85mm}{196mm}{210mm}
+  \BayesText{142mm}{95mm}{45mm}{text=BayesOxblood}{{\BayesLabel BOARD ROOMS}\\\vspace{3mm}{\BayesBodySmall What survival and commercial momentum actually require.}}
+  
+  \BayesText{14mm}{230mm}{180mm}{text=BayesIvory}{{\BayesBody Guest founders and operators break down actual data, unvarnished spreadsheets, and strategic tradeoffs.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{105mm}{0mm}{210mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(157.5mm,-10mm)$) {15 \hspace{3mm}/\hspace{3mm} FOUNDER MASTERCLASSES};
+
+\BayesFooter{BayesIvory}{15}{29}
+\end{tikzpicture}

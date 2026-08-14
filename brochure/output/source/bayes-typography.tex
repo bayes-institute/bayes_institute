@@ -1,0 +1,76 @@
+% Project-local fonts make the brochure deterministic and preserve the brand
+% type system even when Manrope or Newsreader are not installed system-wide.
+\IfFileExists{assets/fonts/manrope/Manrope-Regular.ttf}{
+  \setsansfont{Manrope-Regular.ttf}[
+    Path=assets/fonts/manrope/,
+    BoldFont=Manrope-ExtraBold.ttf,
+    ItalicFont=Manrope-Regular.ttf,
+    BoldItalicFont=Manrope-ExtraBold.ttf,
+    Ligatures=TeX
+  ]
+  \newfontfamily\manrope{Manrope-Regular.ttf}[
+    Path=assets/fonts/manrope/,
+    BoldFont=Manrope-ExtraBold.ttf,
+    Ligatures=TeX
+  ]
+}{
+  \IfFontExistsTF{Manrope}{
+    \setsansfont{Manrope}[Ligatures=TeX]
+    \newfontfamily\manrope{Manrope}[Ligatures=TeX]
+  }{
+    \setsansfont{TeX Gyre Heros}[Ligatures=TeX]
+    \newfontfamily\manrope{TeX Gyre Heros}[Ligatures=TeX]
+  }
+}
+
+\IfFileExists{assets/fonts/newsreader/Newsreader-Variable.ttf}{
+  \newfontfamily\newsreader{Newsreader-Variable.ttf}[
+    Path=assets/fonts/newsreader/,
+    ItalicFont=Newsreader-Italic-Variable.ttf,
+    Ligatures=TeX
+  ]
+}{
+  \IfFontExistsTF{Newsreader}{
+    \newfontfamily\newsreader{Newsreader}[Ligatures=TeX]
+  }{
+    \newfontfamily\newsreader{TeX Gyre Schola}[Ligatures=TeX]
+  }
+}
+
+\IfFileExists{assets/fonts/caveat/Caveat-VariableFont_wght.ttf}{
+  \newfontfamily\caveat{Caveat-VariableFont_wght.ttf}[
+    Path=assets/fonts/caveat/,
+    Ligatures=TeX
+  ]
+}{
+  \IfFontExistsTF{Caveat}{
+    \newfontfamily\caveat{Caveat}[Ligatures=TeX]
+  }{
+    \newfontfamily\caveat{TeX Gyre Schola}[Ligatures=TeX]
+  }
+}
+
+\newcommand{\Sans}{\manrope}
+\newcommand{\Serif}{\newsreader}
+
+% ---- Label / Meta / Caption tier ----
+\newcommand{\BayesLabel}{\Sans\bfseries\fontsize{10}{14}\selectfont\addfontfeatures{LetterSpace=10}}
+\newcommand{\BayesMeta}{\Sans\fontsize{9.5}{14}\selectfont\addfontfeatures{LetterSpace=6}}
+
+% ---- Body tier ----
+\newcommand{\BayesBodyLarge}{\Sans\fontsize{13}{21}\selectfont}
+\newcommand{\BayesBodyMedium}{\Sans\fontsize{12}{20}\selectfont}
+\newcommand{\BayesBody}{\Sans\fontsize{11}{18}\selectfont}
+\newcommand{\BayesBodySmall}{\Sans\fontsize{10}{16}\selectfont}
+\newcommand{\BayesBodyTiny}{\Sans\fontsize{9.5}{15}\selectfont}
+
+% ---- Display / Heading tier ----
+\newcommand{\BayesSerifHero}{\Serif\fontsize{56}{70}\selectfont}
+\newcommand{\BayesSerifLarge}{\Serif\fontsize{32}{42}\selectfont}
+\newcommand{\BayesSerifTitle}{\Serif\fontsize{26}{35}\selectfont}
+\newcommand{\BayesSansDisplay}{\Sans\bfseries\fontsize{28}{36}\selectfont}
+\newcommand{\BayesSansHero}{\Sans\bfseries\fontsize{44}{55}\selectfont}
+\newcommand{\BayesGhostNumeral}{\Serif\fontsize{140}{140}\selectfont}
+
+% ---- Helper for dark backgrounds ----
+\newcommand{\BayesSmallOnDark}{\color{BayesIvory}\BayesBodySmall}

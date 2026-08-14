@@ -1,0 +1,22 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{204mm}{0mm}{210mm}{297mm}
+
+  \BayesPageBackground{BayesOxblood}
+  \BayesText{14mm}{40mm}{180mm}{text=BayesIvory}{{\Serif\fontsize{26}{30}\selectfont The first draft comes first.\\Then the deconstruction. Then the upgrade.}}
+  \BayesText{14mm}{90mm}{180mm}{text=BayesIvory}{{\BayesBody Founders execute Version 1 before receiving theory. After Friday's live teardowns and frameworks, they rebuild Version 2 over the weekend. The delta between Version 1 and Version 2 is the visible proof of learning.}}
+
+  \BayesPanel{BayesIvory}{14mm}{145mm}{98mm}{240mm}
+  \BayesText{20mm}{155mm}{72mm}{text=BayesOxblood}{{\BayesLabel THURSDAY / NAIVE V1 SPRINT}\\\vspace{3mm}{\BayesBody Raw intuitive attempt written or coded under real constraints without external theory.}}
+
+  \BayesPanel{BayesVerdigris}{105mm}{145mm}{196mm}{240mm}
+  \BayesText{111mm}{155mm}{77mm}{text=BayesIvory}{{\BayesLabel WEEKEND / V2 PRODUCTION BUILD}\\\vspace{3mm}{\BayesBody Upgraded production-grade asset informed by Friday frameworks and live mentor critique.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{105mm}{0mm}{210mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(157.5mm,-10mm)$) {11 \hspace{3mm}/\hspace{3mm} VISIBLE PROGRESS};
+
+\BayesFooter{BayesIvory}{11}{29}
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[remember picture,overlay]
+  \BayesPageBackground{BayesOxblood}
+  \BayesImageH{92mm}{0mm}{210mm}{297mm}{assets/field-learning.png}
+  \BayesPanel{BayesOxblood}{0mm}{0mm}{112mm}{297mm}
+  \BayesPanel{BayesVerdigris}{112mm}{0mm}{210mm}{14mm}
+  \BayesPanel{BayesOxblood,opacity=.20}{112mm}{14mm}{210mm}{297mm}
+
+  \node[anchor=north west,inner sep=0] at ($(current page.north west)+(14mm,-16mm)$)
+    {\includegraphics[width=42mm]{assets/bayes-logo-inverse.pdf}};
+  \BayesText{14mm}{75mm}{86mm}{text=BayesIvory}{{\Serif\fontsize{30}{31.5}\selectfont BUILD WHAT\\OUTLIVES YOU.}}
+  \BayesRule{BayesIvory}{14mm}{146mm}{95mm}{.7pt}
+  \BayesText{14mm}{157mm}{78mm}{text=BayesIvory}{{\BayesBody Begin with a question worth carrying. Continue with the rigor, judgment, and courage to make it real.}}
+
+  \BayesPanel{BayesIvory}{14mm}{207mm}{96mm}{252mm}
+  \BayesText{21mm}{216mm}{66mm}{text=BayesOxblood}{{\BayesLabel START A CONVERSATION}\\\vspace{5mm}{\Sans\bfseries\fontsize{14}{16}\selectfont bayes.institute}\\\vspace{3mm}{\BayesMeta ADMISSIONS / PARTNERSHIPS / VISITS}}
+
+  \BayesPhotoCaption{124mm}{264mm}{67mm}{BayesIvory}{REAL-WORLD FIELD LEARNING}
+  \BayesFooter{BayesIvory}{06}{06}
+\end{tikzpicture}

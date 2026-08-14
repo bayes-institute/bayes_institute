@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Newsreader } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/Navbar";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -61,7 +62,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${newsreader.variable}`}>{children}</body>
+      <body className={`${manrope.variable} ${newsreader.variable}`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{6mm}{297mm}
+
+  \BayesPageBackground{BayesIvory}
+  \BayesText{14mm}{38mm}{176mm}{text=BayesOxblood}{{\BayesSansDisplay A SERIOUS FIRST ATTEMPT.}}
+  
+  \BayesPanel{BayesOxblood}{14mm}{65mm}{71mm}{245mm}
+  \BayesText{20mm}{78mm}{45mm}{text=BayesIvory}{{\BayesLabel REAL ENOUGH\\TO TEACH}\\\vspace{5mm}{\BayesBody Working with real people, real needs, and real money, so every lesson feels alive.}}
+  
+  \BayesPanel{BayesVerdigris}{75mm}{65mm}{132mm}{245mm}
+  \BayesText{81mm}{78mm}{45mm}{text=BayesIvory}{{\BayesLabel RIGOROUS ENOUGH\\TO MATTER}\\\vspace{5mm}{\BayesBody Pushing you to think clearly, move quickly, and make decisions you can stand behind.}}
+  
+  \BayesPanel{BayesPaleOxblood}{136mm}{65mm}{196mm}{245mm}
+  \BayesText{142mm}{78mm}{45mm}{text=BayesOxblood}{{\BayesLabel BOUNDED ENOUGH\\TO SURVIVE}\\\vspace{5mm}{\BayesBody Giving you the space to learn, build, and grow without putting everything at risk too soon.}}
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{0mm}{0mm}{105mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(52.5mm,-10mm)$) {06 \hspace{3mm}/\hspace{3mm} THE BOUNDED FIRST ATTEMPT};
+
+\BayesFooter{BayesOxblood}{06}{29}
+\end{tikzpicture}

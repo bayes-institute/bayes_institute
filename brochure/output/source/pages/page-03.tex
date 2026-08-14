@@ -1,0 +1,50 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+  \BayesPanel{BayesVerdigris}{204mm}{0mm}{210mm}{297mm}
+
+  \BayesPageBackground{BayesIvory}
+
+  % ── TOP IMAGE RIBBON PLACEHOLDER ──
+  % Panoramic band: Y = 40mm to 120mm (Height: 80mm - leaving a 20mm gap below the verdigris box)
+  \draw[fill=BayesOxblood!5,draw=BayesOxblood!25,line width=0.4pt]
+    ($(current page.north west)+(0mm,-40mm)$) rectangle ($(current page.north west)+(210mm,-120mm)$);
+
+  % Inner grid accent lines for placeholder aesthetic
+  \draw[BayesOxblood!15,line width=0.3pt,dashed]
+    ($(current page.north west)+(0mm,-80mm)$) -- ($(current page.north west)+(210mm,-80mm)$);
+  \draw[BayesOxblood!15,line width=0.3pt,dashed]
+    ($(current page.north west)+(105mm,-40mm)$) -- ($(current page.north west)+(105mm,-120mm)$);
+
+  % Placeholder Label Top
+  \node[anchor=center,text=BayesOxblood!60,font=\BayesLabel]
+    at ($(current page.north west)+(105mm,-80mm)$) {IMAGE RIBBON PLACEHOLDER: PANORAMA OF HUMAN EXCELLENCE (HISTORICAL ACHIEVEMENTS)};
+
+
+  % ── HERO STATEMENT (Vertically centered in 70mm gap: Y=120mm to 190mm) ──
+  \BayesText{25mm}{142mm}{160mm}{text=BayesOxblood}{{\Serif\fontsize{32}{38}\selectfont Humanity's greatest promise\\is what people can become.}}
+
+
+  % ── BOTTOM IMAGE RIBBON PLACEHOLDER ──
+  % Panoramic band: Y = 190mm to 265mm (Height: 75mm)
+  \draw[fill=BayesOxblood!5,draw=BayesOxblood!25,line width=0.4pt]
+    ($(current page.north west)+(0mm,-190mm)$) rectangle ($(current page.north west)+(210mm,-265mm)$);
+
+  % Inner grid accent lines for placeholder aesthetic
+  \draw[BayesOxblood!15,line width=0.3pt,dashed]
+    ($(current page.north west)+(0mm,-227.5mm)$) -- ($(current page.north west)+(210mm,-227.5mm)$);
+  \draw[BayesOxblood!15,line width=0.3pt,dashed]
+    ($(current page.north west)+(105mm,-190mm)$) -- ($(current page.north west)+(105mm,-265mm)$);
+
+  % Placeholder Label Bottom
+  \node[anchor=center,text=BayesOxblood!60,font=\BayesLabel]
+    at ($(current page.north west)+(105mm,-227.5mm)$) {IMAGE RIBBON PLACEHOLDER: PANORAMA OF HUMAN EXCELLENCE (MODERN FRONTIERS)};
+
+
+  % ── TOP OUTER VERDIGRIS HEADER BOX (2 cm height) ──
+  \BayesPanel{BayesVerdigris}{105mm}{0mm}{210mm}{20mm}
+  \node[anchor=center,text=BayesIvory,font=\BayesLabel]
+    at ($(current page.north west)+(157.5mm,-10mm)$) {01 \hspace{3mm}/\hspace{3mm} THE BELIEF};
+
+\BayesFooter{BayesOxblood}{01}{29}
+
+\end{tikzpicture}
