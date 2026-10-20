@@ -1,0 +1,22 @@
+{
+  "name": "bayes-institute",
+  "private": true,
+  "packageManager": "pnpm@11.23.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=11.0.0"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.7.7"
+  }
+}

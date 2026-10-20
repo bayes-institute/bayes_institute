@@ -1,0 +1,7 @@
+packages:
+  - "client/apps/*"
+  - "client/packages/*"
+
+# Required by eslint's resolver; pinning this allow-list keeps lifecycle scripts explicit.
+allowBuilds:
+  unrs-resolver: true

@@ -1,0 +1,78 @@
+name: bayes-institute
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-bayes}
+      POSTGRES_USER: ${POSTGRES_USER:-bayes}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bayes}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  api:
+    build:
+      context: ./server/services/api
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000,http://localhost:3001}
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-bayes}:${POSTGRES_PASSWORD:-bayes}@postgres:5432/${POSTGRES_DB:-bayes}
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://localhost:8000/api/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+
+  web:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+      args:
+        APP_NAME: web
+    environment:
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    ports:
+      - "3000:3000"
+
+  auth:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+      args:
+        APP_NAME: auth
+    environment:
+      PORT: 3001
+    ports:
+      - "3001:3001"
+
+  pgadmin:
+    image: dpage/pgadmin4:9
+    profiles: ["tools"]
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@bayes.local}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-change-me-before-sharing}
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres-data:
+  pgadmin-data:
