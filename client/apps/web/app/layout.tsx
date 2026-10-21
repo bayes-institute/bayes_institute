@@ -1,5 +1,20 @@
 import type { Metadata } from 'next';
+import { EB_Garamond, Manrope } from 'next/font/google';
+import { SiteFooter } from '../components/site-footer';
+import { SiteHeader } from '../components/site-header';
 import './styles.css';
+
+const displayFont = EB_Garamond({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const bodyFont = Manrope({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
@@ -20,7 +35,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${displayFont.variable} ${bodyFont.variable}`}>
+        <div className="site-shell">
+          <SiteHeader />
+          <main id="main-content">{children}</main>
+          <SiteFooter />
+        </div>
+      </body>
     </html>
   );
 }
