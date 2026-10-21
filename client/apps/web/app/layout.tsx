@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { EB_Garamond, Manrope } from 'next/font/google';
+import { PromoBar } from '../components/promo-bar';
 import { SiteFooter } from '../components/site-footer';
 import { SiteHeader } from '../components/site-header';
 import './styles.css';
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${displayFont.variable} ${bodyFont.variable}`}>
+        <PromoBar />
         <div className="site-shell">
           <SiteHeader />
           <main id="main-content">{children}</main>

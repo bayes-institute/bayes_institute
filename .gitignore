@@ -28,3 +28,6 @@ pgadmin-data/
 .runtime/
 .DS_Store
 *.swp
+
+.creds
+claude_code.ps1
