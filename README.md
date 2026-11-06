@@ -31,7 +31,7 @@ Copy `.env.example` to `.env`, then choose your local environment:
 ./scripts/start.sh docker all --tools # full stack + development-only pgAdmin
 ```
 
-On Windows PowerShell, use `./scripts/start.ps1` for web only, or `./scripts/start.ps1 docker all -Tools` for the full Docker stack.
+On Windows PowerShell, use `./scripts/start.ps1 web` for the web app, `./scripts/start.ps1 all` for the complete local stack (installed PostgreSQL, both clients, and FastAPI), or `./scripts/start.ps1 docker all -Tools` for the full Docker stack.
 
 The scripts validate only the prerequisites required by the selected target. See [the development guide](docs/development.md) for every target and its exact dependency checks.
 
